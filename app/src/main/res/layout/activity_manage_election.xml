@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ManageElection">
+
+        <TextView
+            android:id="@+id/manage_election_heading"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:letterSpacing="0.05"
+            android:text="Manage Election"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/manage_election_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.028" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/manage_election_rv"
+            android:layout_width="match_parent"
+            android:layout_height="625dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_candidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/options_ui"
+            app:layout_constraintEnd_toEndOf="@+id/options_ui"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="@+id/options_ui"
+            app:srcCompat="@drawable/create_128"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/view_voters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/create_candidate"
+            app:layout_constraintEnd_toEndOf="@+id/create_candidate"
+            app:layout_constraintStart_toStartOf="@+id/create_candidate"
+            app:srcCompat="@drawable/password_visible"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/stop_voting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/view_voters"
+            app:layout_constraintEnd_toEndOf="@+id/view_voters"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/view_voters"
+            app:srcCompat="@drawable/stop_circle_64"
+            app:tint="@color/white" />
+
+<!--        <Button-->
+<!--            android:id="@+id/options_ui"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="63dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:backgroundTint="@color/black"-->
+<!--            android:text="+"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="33sp"-->
+<!--            app:cornerRadius="600dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.949"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/manage_election_heading"-->
+<!--            app:layout_constraintVertical_bias="0.990" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/options_ui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:contentDescription="TODO"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976"
+            app:srcCompat="@drawable/add_64"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/create_candidate_txt"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:backgroundTint="#000000"
+            android:padding="2dp"
+            android:text="Create Candidate"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/options_ui"
+            app:layout_constraintEnd_toStartOf="@+id/create_candidate"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/manage_election_rv"
+            app:layout_constraintTop_toTopOf="@+id/create_candidate"
+            app:layout_constraintVertical_bias="0.315" />
+
+        <TextView
+            android:id="@+id/view_voters_txt"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:backgroundTint="#000000"
+            android:padding="2dp"
+            android:text="View Voters"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/create_candidate_txt"
+            app:layout_constraintEnd_toStartOf="@+id/view_voters"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/manage_election_rv"
+            app:layout_constraintTop_toTopOf="@+id/view_voters"
+            app:layout_constraintVertical_bias="0.28" />
+
+        <TextView
+            android:id="@+id/stop_voting_txt"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:backgroundTint="#000000"
+            android:padding="2dp"
+            android:text="Stop Voting"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/view_voters_txt"
+            app:layout_constraintEnd_toStartOf="@+id/stop_voting"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/manage_election_rv"
+            app:layout_constraintTop_toTopOf="@+id/stop_voting"
+            app:layout_constraintVertical_bias="0.346" />
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cement_3"
+            android:indeterminateTint="#00A61B"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.066" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "118075061717",
+    "project_id": "eelection-5267d",
+    "storage_bucket": "eelection-5267d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118075061717:android:e0eaf672baf95041bfb95c",
+        "android_client_info": {
+          "package_name": "com.example.eelection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118075061717-j0p7m8uh5ftq6f44ejvhtbfhfjv1urvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3No5r53l-6EiBK2mLjW8YQtRjUasXrWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118075061717-j0p7m8uh5ftq6f44ejvhtbfhfjv1urvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

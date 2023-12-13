@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Candidate_Details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:background="@drawable/cement_3"
+                android:indeterminateTint="#00A61B"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="196dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:text="Name"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="-11dp" />
+
+            <TextView
+                android:id="@+id/party"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="196dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:text="Party"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="196dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:text="Post"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/party"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/party"
+                app:layout_constraintTop_toBottomOf="@+id/party" />
+
+
+        </LinearLayout>
+
+<!--        <Button-->
+<!--            android:id="@+id/options_ui"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="63dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:backgroundTint="@color/black"-->
+<!--            android:text="+"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="33sp"-->
+<!--            app:cornerRadius="600dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.949"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.990" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/options_ui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:contentDescription="TODO"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976"
+            app:srcCompat="@drawable/add_64"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_candidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/options_ui"
+            app:layout_constraintEnd_toEndOf="@+id/options_ui"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/options_ui"
+            app:srcCompat="@drawable/edit_64"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/delete_candidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/edit_candidate"
+            app:layout_constraintEnd_toEndOf="@+id/edit_candidate"
+            app:layout_constraintStart_toStartOf="@+id/edit_candidate"
+            app:srcCompat="@drawable/delete"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/edit_candidate_txt"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:backgroundTint="#000000"
+            android:padding="2dp"
+            android:text="Edit Candidate"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/options_ui"
+            app:layout_constraintEnd_toStartOf="@+id/edit_candidate"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_candidate"
+            app:layout_constraintVertical_bias="0.421" />
+
+        <TextView
+            android:id="@+id/delete_candidate_txt"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:backgroundTint="#000000"
+            android:padding="2dp"
+            android:text="Delete Candidate"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/delete_candidate"
+            app:layout_constraintEnd_toStartOf="@+id/delete_candidate"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/delete_candidate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
